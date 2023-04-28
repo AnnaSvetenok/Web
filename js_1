@@ -1,0 +1,48 @@
+<meta charset="utf-8">
+<script>
+//Задача 1
+var name = parseInt(prompt("Переменная: "))
+
+//Задача 2
+var result;
+var number1 = parseInt(prompt("Введите число 1: "))
+var operation = prompt("Введите операцию: ")
+var number2 = parseInt(prompt("Введите число 2: "))
+
+switch(operation){
+    case '+':
+        result = number1 + number2;
+        break;
+    
+    case '-':
+        result = number1 - number2;
+        break;
+        
+    case '*':
+        result = number1 * number2;
+        break;
+        
+    case '/':
+        result = number1 / number2;
+        break;
+    
+}
+
+alert("Ответ: " + result)
+
+//Задача 3
+
+alert("Задумайте число, умножьте это число на 2 и прибавьте к полученному резуьтату 7")
+var number = parseInt(prompt("Введите полученное число: "))
+var result2 = (number-7)/2
+alert("Число которое вы задумали: " + result2)
+
+
+//Задача 4
+var name = prompt("Введите имя пользователя: ")
+var birthday = parseInt(prompt("Введите год рождения пользователя: "))
+var age = 2023 - birthday;
+document.write((name) + ':' + (age))
+
+
+</script>
