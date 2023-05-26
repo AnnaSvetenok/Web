@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+
+<html>
+
+<head>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"  
+integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+<script>
+
+
+//Задача 1
+
+let user = {
+    name: "Джон",
+    age: 30
+
+};
+
+user.sayHi = function() 
+
+{
+    alert("Привет!");
+
+};
+
+user.sayHi(); // Привет!
+
+//Задача 2
+
+
+let customer={
+    name:"Anna",
+    phone_number:"+71526554585",
+    email:"customer@mail.ru",
+    birthday:"13.06.2013",
+    country:"Russia"
+
+}
+
+//Задача3
+
+let user1 = {
+    name: "Джон",
+    age: 30,
+    email:"john@google.com"
+
+};
+
+let user2 = {
+    name: "Kate",
+    age: 28,
+    email:"kate@mail.ru"
+
+};
+
+
+let order1={
+    user: user1,
+    restaurant: "ДоДо Пицца",
+    order:["Сырная","Пеперони"],
+    summa: 1000
+
+};
+
+
+let order2={
+    user: user2,
+    restaurant: "Вкусно и точка",
+    order:["Картошка фри","Молочный коктель","Нагетсы"],
+    summa: 450
+
+};
+
+let restaurant1 = {
+    name: "ДоДо Пицца",
+    rating: 4.5,
+    location: "Москва"
+
+};
+
+let restaurant2 = {
+    name: "Вкусно и точка",
+    rating: 4.0,
+    location: "Москва"
+
+};
+
+
+//Задача 4
+
+function User(name) {
+    this.name = name;
+    this.isAdmin = false;
+
+}
+
+let user3 = new User("Кира");
+
+let user4 = new User("Аня");
+
+let user5 = new User("Тамара");
+
+let user6 = new User("Ангелина");
+
+let user7 = new User("Святослав");
+
+let user8 = new User("Ульяна");
+
+//Задача5
+
+function Student(name, age, faculty) {
+  this.name = name;
+  this.age = age;
+  this.faculty = faculty;
+}
+
+let student = new Student("Алексей", 20, "Прикладная Информатика");
+
+
+result = '';
+
+result += `Задача2. Информация о покупателе:\n${customer.name}\n${customer.email}\n${customer.phone_number}\n`;
+result += `\nЗадача3.\nПользователь 1:\n${user1.name} ${user1.email}\n`;
+result += `Пользователь 2:\n${user2.name} ${user2.email}\n`;
+result += `Заказ 1:\n${order1.user.name} заказал(а) ${order1.order} из ${order1.restaurant}\n`;
+result += `Заказ 2:\n${order2.user.name} заказал(а) ${order2.order} из ${order2.restaurant}\n`;
+result += `Ресторан 1:\n${restaurant1.name}, рейтинг ${restaurant1.rating}, находится в ${restaurant1.location}\n`;
+result += `Ресторан 2:\n${restaurant2.name}, рейтинг ${restaurant2.rating}, находится в ${restaurant2.location}\n`;
+result += `\nЗадача4.\nИмена группы:\n${user3.name} ${user4.name} ${user5.name} ${user6.name} ${user7.name} ${user8.name}\n`;
+result += `\nЗадача5.\nСтудент:\nИмя: ${student.name}\nВозраст: ${student.age}\nФакультет: ${student.faculty}\n`;
+
+
+document.body.insertAdjacentHTML('afterBegin', `<pre>${result}</pre>`);
+
+</script>
+
+</body>
+
+
+
+
+
