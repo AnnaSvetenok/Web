@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+
+<html>
+
+<head>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"  
+integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+<script>
+
+
+//Задача 1
+function showMessage() {
+
+    let message = "Привет, я JavaScript!"; // локальная переменная
+    alert( message );
+
+}
+
+showMessage(); // Привет, я JavaScript!
+
+//alert( message );
+
+
+//Задача 2
+
+function Palindrom(string){
+    this.string=string;
+    string = string.toLowerCase().replace(/\s/g, "");
+    let string_to_check=string.split('').reverse().join('')
+    if (string == string_to_check){
+        return "Палиндром";
+        //document.write("Палиндром");
+    }
+    else{
+        return "Не палиндром";
+        //document.write("Не палиндром");
+    }
+}
+//Palindrom("Анна")
+
+let slovo = new Palindrom("Анна");
+
+//Задача3
+
+let n = 15;
+var array= [];
+var numbers=[];
+for (let i = 0; i < n; i++) {
+  numbers.push(Math.floor(Math.random() * 41) - 10); 
+}
+
+
+for (let j = 0; j < n; j++) {
+  if (numbers[j] < 0) {
+    array[j] = Math.pow(numbers[j], 2); 
+  }
+  else{
+      array[j]=numbers[j];
+  }
+}
+
+//Задача4
+class Name{
+    constructor(name) {
+    this.name = name;
+  }
+
+  printName() {
+    return "Имя: "+ this.name;
+  }
+}
+
+let name = new Name("Anna");
+
+//Задача6
+class NameReverse{
+    constructor(name) {
+    this.name = name;
+  }
+
+  reverseName() {
+    var reverseName = this.name.toLowerCase().split("").reverse().join("");
+    return "Имя: "+ this.name + "\nПеревернутое имя:" + reverseName;
+  }
+}
+let name2 = new NameReverse("Аня");
+
+result = '';
+
+result += `Задача2.\nСлово ${slovo.string} - ${Palindrom("Анна")}\n`;
+result += `\nЗадача3.\nМассив до замены: ${numbers}\nМассив после замены: ${array}\n`;
+result += `\nЗадача4.\n${name.printName()}\n`;
+result += `\nЗадача6.\n${name2.reverseName()}\n`;
+
+
+document.body.insertAdjacentHTML('afterBegin', `<pre>${result}</pre>`);
+
+</script>
+
+</body>
+
+
+
+
+
