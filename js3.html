@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+
+
+<script>
+
+//Задача 1
+var randoms = Array.from({length:15}, () => Math.floor((Math.random() * (30 - (-10) + 1)) + (-10)));
+    
+//console.log(randoms)
+    
+    var summa=[];
+    var total = 0;
+    
+    for(var i of randoms){
+        if (i>0){
+            summa.push(i)
+        }
+    }
+    for(var j of summa){
+        total+=j;
+    }
+    
+    //console.log("Среднее арифметическое положительных", total/summa.length)
+
+
+//Задача 2
+
+var array=[]
+for (let i = 0; i < randoms.length; i++) {
+  if (randoms[i] < 0) {
+    array[i] = Math.pow(randoms[i], 2); // Возводим в квадрат
+  }
+  else{
+      array[i]=randoms[i]
+  }
+}
+//console.log("Массив после замены:", array
+
+
+
+//Задача 3
+var randoms3 = Array.from({length:15}, () => Math.floor((Math.random() * (30 - (-10) + 1)) + (-10)));
+    //console.log(randoms3)
+    var count_for_sum = 0;
+    var total_for_sum = 0;
+    var count_for_minus = 0;
+    var total_for_minus = 0;
+    var count_for_zeroes = 0;
+    
+    for(var i of randoms3){
+        if (i>0){
+            count_for_sum+=1;
+            total_for_sum+=i;
+        }
+    }
+   // console.log("Среднее арифметическое положительных чисел", total_for_sum/count_for_sum)
+    
+    for(var i of randoms3){
+        if (i<0){
+            count_for_minus+=1;
+            total_for_minus+=i;
+        }
+    }
+   // console.log("Среднее арифметическое отрицательных чисел", total_for_minus/count_for_minus)
+    
+    for(var i of randoms3){
+        if (i==0){
+            count_for_zeroes+=1;
+        }
+    }
+    //console.log("Количество нулей:", count_for_zeroes)
+
+
+
+//Задача 4
+var count_for_red = 0;
+
+var colors = Array.from({length:1000000}, () => Math.floor((Math.random() * (2 - 0 + 1)) + 0));
+
+for(var i of colors){
+    if (i == 2) {
+    count_for_red += 1;
+  }
+}
+
+//console.log(`Красный цвет выпал ${count_for_red} раз(а)`);
+
+result= '';
+    
+    result += `Задача 1. Массив из 15 чисел: ${randoms}\n`;
+    result += `Среднее арифметическое положительных чисел: ${total/summa.length}\n`;
+    result += `\nЗадача2. Массив после замены(на основе массива из задачи 1): ${array}\n`;
+    result += `\nЗадача 3. Массив чисел: ${randoms3}\n`;
+    result += `Среднее арифметическое положительных чисел: ${total_for_sum/count_for_sum}\n`;
+    result += `Среднее арифметическое отрицательных чисел: ${total_for_minus/count_for_minus}\n`;
+    result += `Количество нулей: ${count_for_zeroes}\n`;	
+    result += `\nЗадача 4. Красный цвет выпал ${count_for_red}раз(а)\n`;
+document.body.insertAdjacentHTML('afterBegin', `<pre>${result}</pre>`);
+</script>
+
+
+</body>
+</html>
+
+
+
